@@ -2,7 +2,7 @@ import Timer from './components/Timer/Timer';
 import Button from './components/Button/Button';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import styles from './settings.scss';
+import styles from './App.module.scss';
 
 const App = () => {
   const [time, setTime] = useState(0);
@@ -14,7 +14,7 @@ const App = () => {
         setTime((time) => time + 1);
       }, 1)
     );
-    console.log('start');
+    // console.log('start');
   };
 
   const stopTime = () => {
@@ -22,12 +22,12 @@ const App = () => {
       clearInterval(timer);
     }
 
-    console.log('stop');
+    // console.log('stop');
   };
 
   const resetTime = () => {
     setTime(0);
-    console.log('reset');
+    // console.log('reset');
   };
 
   useEffect(() => {
